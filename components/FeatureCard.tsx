@@ -10,7 +10,7 @@ type Props = {
 
 const FeatureCard = ({ title, description, image, color }: Props) => {
   return (
-    <div className="w-full h-full bg-white p-3 shadow-md rounded-2xl">
+    <div className="w-full h-full bg-white p-3 shadow-md rounded-2xl feature-card">
       <div
         className="flex items-center justify-center max-w-10 p-2 rounded-lg mb-5"
         style={{ backgroundColor: color }}

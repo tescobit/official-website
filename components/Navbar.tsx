@@ -10,7 +10,14 @@ const Navbar = () => {
 
   return (
     <header className="flex justify-between items-center my-10 relative">
-      <Link href="/">Logo</Link>
+      <Link href="/">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          fill
+          className="!w-[200px] !h-[40px]"
+        />
+      </Link>
 
       <ul
         role="list"

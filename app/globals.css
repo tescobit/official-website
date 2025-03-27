@@ -142,6 +142,7 @@
       @apply mt-2 text-justify  md:text-xl text-[#F7F6FF]/80;
     }
 
+
   }
 
   .nav-item {
@@ -174,3 +175,5 @@
   background-position: center;
   background-size: cover;
 }
+
+
