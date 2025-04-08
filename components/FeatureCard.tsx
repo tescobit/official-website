@@ -19,9 +19,9 @@ const FeatureCard = ({ title, description, image, color }: Props) => {
       </div>
       <h3 className="text-xl md:text-2xl mb-3 font-semibold">{title}</h3>
       <p className="text-black/80">{description}</p>
-      <Button variant="secondary" className="text-black mt-3">
-        Learn More
-      </Button>
+      {/*<Button variant="secondary" className="text-black mt-3">*/}
+      {/*  Learn More*/}
+      {/*</Button>*/}
     </div>
   );
 };

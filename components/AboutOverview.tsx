@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const AboutOverview = () => {
   return (
-    <div className="overview w-full">
+    <div className="overview w-full bg-white" id="about">
       <div className="root-container mt-20 mb-20">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row gap-10 items-center">
           <div className="flex flex-1 flex-col gap-5 relative mt-10 md:mt-0">
@@ -36,9 +36,9 @@ const AboutOverview = () => {
               success.
             </p>
             <div>
-              <Button variant="default" className=" font-bold h-12">
-                Learn More
-              </Button>
+              {/*<Button variant="default" className=" font-bold h-12">*/}
+              {/*  Learn More*/}
+              {/*</Button>*/}
             </div>
           </div>
         </div>

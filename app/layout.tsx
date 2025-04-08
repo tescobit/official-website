@@ -1,19 +1,23 @@
 import type { Metadata } from "next";
-import localFonts from 'next/font/local'
+import localFonts from "next/font/local";
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-
+import Footer from "@/components/Footer";
 
 const spaceGrotesk = localFonts({
-    src: [
-        {path: '/fonts/SpaceGrotesk-Light.ttf', weight: '300', style: 'normal'},
-        {path: '/fonts/SpaceGrotesk-Regular.ttf', weight: '400', style: 'normal'},
-        {path: '/fonts/SpaceGrotesk-Medium.ttf', weight: '500', style: 'normal'},
-        {path: '/fonts/SpaceGrotesk-SemiBold.ttf', weight: '600', style: 'normal'},
-        {path: '/fonts/SpaceGrotesk-Bold.ttf', weight: '700', style: 'normal'},
-    ]
-})
+  src: [
+    { path: "/fonts/SpaceGrotesk-Light.ttf", weight: "300", style: "normal" },
+    { path: "/fonts/SpaceGrotesk-Regular.ttf", weight: "400", style: "normal" },
+    { path: "/fonts/SpaceGrotesk-Medium.ttf", weight: "500", style: "normal" },
+    {
+      path: "/fonts/SpaceGrotesk-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    { path: "/fonts/SpaceGrotesk-Bold.ttf", weight: "700", style: "normal" },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Tescobit",
@@ -27,19 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.className} antialiased`}
-      >
+      <body className={`${spaceGrotesk.className} antialiased`}>
         <main>
-            <div className='root-container min-h-auto'>
-                <div className='mx-auto max-w-7xl w-full'>
-                    <Navbar/>
-                </div>
+          <div className="root-container min-h-auto">
+            <div className="mx-auto max-w-7xl w-full">
+              <Navbar />
             </div>
-                <div>
-                    {children}
-                </div>
-
+          </div>
+          <div>{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
