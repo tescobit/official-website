@@ -8,7 +8,7 @@ const AboutOverview = () => {
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row gap-10 items-center">
           <div className="flex flex-1 flex-col gap-5 relative mt-10 md:mt-0">
             <Image
-              src="/images/about.jpg"
+              src="./images/about.jpg"
               alt="about"
               width={500}
               height={600}
