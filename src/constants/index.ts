@@ -142,4 +142,31 @@ const projects = [
   },
 ];
 
-export { navbarItems, services, projects };
+const leadershipTeam = [
+  {
+    img: '/images/t.jpeg',
+    name: 'Themiya Kasun',
+    role: 'CEO & Founder',
+    expertise: 'Strategic Leadership & Business Growth',
+  },
+  {
+    img: '/images/k.jpg',
+    name: 'Kaveesha Waduge',
+    role: 'Chief Technology Officer',
+    expertise: 'Cloud Architecture & AI Innovation',
+  },
+  {
+    img: '/images/a.jpg',
+    name: 'Anush Manujaya',
+    role: 'Head of Design',
+    expertise: 'UX/UI Innovation',
+  },
+  {
+    img: '/images/v.jpg',
+    name: 'Vimukthi Dilshan',
+    role: 'Lead Developer',
+    expertise: 'Full-Stack Development',
+  },
+];
+
+export { navbarItems, services, projects, leadershipTeam };

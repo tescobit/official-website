@@ -2,6 +2,7 @@ import ContactSection from './components/contact';
 import CoreValues from './components/core-values';
 import Footer from './components/footer';
 import Hero from './components/hero';
+import LeadershipSection from './components/leadership';
 import Navbar from './components/navbar';
 import Offerings from './components/offerings';
 import Portfolio from './components/portfolio';
@@ -16,6 +17,7 @@ const App = () => {
       <Offerings />
       <Portfolio />
       <CoreValues />
+      <LeadershipSection />
       <ContactSection />
       <Footer />
     </div>
