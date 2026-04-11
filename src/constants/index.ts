@@ -140,6 +140,27 @@ const projects = [
     stack: ['React', 'Node.js', 'Chart.js', 'MongoDB'],
     year: '2025',
   },
+  {
+    id: 4,
+    title: 'Smart Nano film Landing Page',
+    category: 'Web Development',
+    image: '/images/smart-nano-web.png',
+    description:
+      'An elite automotive care and protection landing page featuring a high-impact visual hero, a categorized gallery of recent projects, and a streamlined real-time appointment booking system designed for maximum lead conversion',
+    stack: ['React', 'Node.js', 'PrismaDB'],
+    year: '2026',
+    link: 'https://nanofilm.qa/',
+  },
+  {
+    id: 5,
+    title: 'Smart Nano Film System',
+    category: 'Web Development',
+    image: '/images/smart-nano-sys.png',
+    description:
+      'A comprehensive automotive service management dashboard featuring real-time revenue analytics, integrated inventory tracking, and automated workflows for professional quotation and invoice generation, designed to streamline branch-wide operations and customer bookings.',
+    stack: ['React', 'Node.js', 'PrismaDB', 'ChartJs', 'MailService'],
+    year: '2026',
+  },
 ];
 
 const leadershipTeam = [

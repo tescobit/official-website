@@ -1,4 +1,4 @@
-import { contactSchema } from '@/lib/validations';
+import { contactSchema } from '../../lib/validations';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { renderToStaticMarkup } from 'react-dom/server';
 import emailjs from '@emailjs/browser';
@@ -43,7 +43,7 @@ const ContactForm = () => {
         email={data.email}
         service={data.service}
         projectDetails={data.projectDetails}
-      />
+      />,
     );
 
     const templateParams = {
@@ -52,12 +52,18 @@ const ContactForm = () => {
       message_html: emailHtml,
     };
 
+    const env = (
+      import.meta as ImportMeta & {
+        env: Record<string, string | undefined>;
+      }
+    ).env;
+
     try {
       await emailjs.send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        env.VITE_SERVICE_ID ?? '',
+        env.VITE_TEMPLATE_ID ?? '',
         templateParams,
-        import.meta.env.VITE_PUBLIC_KEY
+        env.VITE_PUBLIC_KEY ?? '',
       );
 
       alert('Email sent successfully!');
