@@ -19,9 +19,11 @@ const Footer = () => {
           <div className='space-y-6'>
             <div>
               <img
-                src='./images/logo-white.png'
-                alt='Logo'
-                className='md:w-50 w-40'
+                src='/images/logo-white.svg'
+                alt='Tescobit Logo'
+                width='200'
+                height='40'
+                className='w-36 md:w-44 mb-6'
               />
             </div>
             <p className='text-gray-400 leading-relaxed text-sm'>
@@ -32,14 +34,17 @@ const Footer = () => {
             <div className='flex gap-4'>
               <SocialIcon
                 icon={Linkedin}
+                label='linkedin'
                 link='https://www.linkedin.com/company/tescobit/'
               />
               <SocialIcon
                 icon={Facebook}
+                label='facebook'
                 link='https://www.facebook.com/profile.php?id=61573863961119'
               />
               <SocialIcon
                 icon={Instagram}
+                label='instagram'
                 link='https://www.instagram.com/tescobit/'
               />
             </div>
@@ -85,7 +90,10 @@ const Footer = () => {
                 placeholder='Your email'
                 className='bg-transparent w-full px-4 py-2 text-sm text-white outline-none placeholder-gray-500'
               />
-              <button className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-md transition-colors'>
+              <button
+                aria-label='Subscribe to newsletter'
+                className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-md transition-colors'
+              >
                 <ArrowRight size={18} />
               </button>
             </div>
@@ -93,7 +101,7 @@ const Footer = () => {
         </div>
 
         <div className='border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4'>
-          <p className='text-gray-500 text-sm'>
+          <p className='text-gray-400 text-sm'>
             © {new Date().getFullYear()} Tescobit. All rights reserved.
           </p>
           <div className='flex gap-8 text-sm text-gray-500'>
@@ -109,20 +117,25 @@ const Footer = () => {
     </footer>
   );
 };
+
 const SocialIcon = ({
   icon: Icon,
   link,
+  label,
 }: {
   icon: ComponentType<{ size?: number; className?: string }>;
   link: string;
+  label: string;
 }) => (
   <Link
     to={link}
+    aria-label={label}
     className='h-8 w-8 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 hover:bg-blue-500 transition-all'
   >
     <Icon size={16} />
   </Link>
 );
+
 const FooterLink = ({
   children,
   link,

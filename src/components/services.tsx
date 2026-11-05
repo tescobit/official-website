@@ -5,13 +5,13 @@ const ServicesSection = () => {
   return (
     <section className='py-20 ' id='services'>
       <div className='text-center w-full flex flex-col items-center justify-center mb-16'>
-        <span className='inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold mb-4'>
+        <span className='inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4'>
           Our Services
         </span>
-        <h1 className='text-4xl font-bold text-gray-800 mb-4 leading-tight'>
+        <h2 className='text-4xl font-bold text-gray-800 mb-4 leading-tight'>
           Comprehensive IT Solutions <br />
-          <span className='text-blue-400'>Tailored to Your Needs</span>
-        </h1>
+          <span className='text-blue-600'>Tailored to Your Needs</span>
+        </h2>
 
         <p className='text-xl text-gray-600 max-w-4xl'>
           From concept to deployment, we provide end-to-end technology services

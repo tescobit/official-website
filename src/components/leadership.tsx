@@ -23,6 +23,8 @@ const LeadershipSection = () => {
                 <img
                   src={member.img}
                   alt={member.name}
+                  loading='lazy'
+                  decoding='async'
                   className='h-24 w-24 rounded-full object-cover'
                 />
               </div>
