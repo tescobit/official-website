@@ -74,12 +74,24 @@ const Footer = () => {
             <h3 className='text-lg font-bold mb-6'>Get in Touch</h3>
             <ul className='space-y-4 mb-8'>
               <li className='flex gap-3 text-gray-400 text-sm items-center'>
-                <Phone size={18} className='text-blue-500 shrink-0' />
-                <span>+94 70 145 6950</span>
+                <a
+                  href='https://wa.me/94701456950'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover:text-white transition-colors flex items-center gap-3'
+                >
+                  <Phone size={18} className='text-blue-500 shrink-0' />
+                  <span>+94 70 145 6950 (WhatsApp)</span>
+                </a>
               </li>
               <li className='flex gap-3 text-gray-400 text-sm items-center'>
-                <Mail size={18} className='text-blue-500 shrink-0' />
-                <span>hello@tescobit.com</span>
+                <a
+                  href='mailto:hello@tescobit.com'
+                  className='hover:text-white transition-colors flex items-center gap-3'
+                >
+                  <Mail size={18} className='text-blue-500 shrink-0' />
+                  <span>hello@tescobit.com</span>
+                </a>
               </li>
             </ul>
 
