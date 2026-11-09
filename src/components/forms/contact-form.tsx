@@ -16,6 +16,7 @@ import { Button } from '../ui/button';
 import { Send } from 'lucide-react';
 import type z from 'zod';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -53,27 +54,50 @@ const ContactForm = () => {
     const templateParams = {
       user_name: data.name,
       user_email: data.email,
+      phone_number: data.phoneNumber || 'Not provided',
+      company_name: data.companyName || 'Not provided',
+      service: data.service,
+      project_details: data.projectDetails,
       message_html: emailHtml,
+      to_email: 'themiyakasun.tb@gmail.com',
+      reply_to: data.email,
     };
 
-    const env = (
-      import.meta as ImportMeta & {
-        env: Record<string, string | undefined>;
-      }
-    ).env;
+    const serviceId =
+      import.meta.env.VITE_SERVICE_ID ||
+      (import.meta as ImportMeta & { env: Record<string, string | undefined> })
+        .env.VITE_SERVICE_ID;
+    const templateId =
+      import.meta.env.VITE_TEMPLATE_ID ||
+      (import.meta as ImportMeta & { env: Record<string, string | undefined> })
+        .env.VITE_TEMPLATE_ID;
+    const publicKey =
+      import.meta.env.VITE_PUBLIC_KEY ||
+      (import.meta as ImportMeta & { env: Record<string, string | undefined> })
+        .env.VITE_PUBLIC_KEY;
 
     try {
       await emailjs.send(
-        env.VITE_SERVICE_ID ?? '',
-        env.VITE_TEMPLATE_ID ?? '',
+        serviceId ?? '',
+        templateId ?? '',
         templateParams,
-        env.VITE_PUBLIC_KEY ?? '',
+        publicKey ?? '',
       );
 
-      alert('Email sent successfully!');
+      toast.success('Message Sent Successfully!', {
+        description:
+          "Thank you for reaching out. We'll get back to you within 24 hours.",
+        duration: 5000,
+      });
+      form.reset();
     } catch (error) {
       console.error('Failed to send:', error);
-      alert('Failed to send email.');
+      toast.error('Failed to Send Message', {
+        description:
+          (error as { text?: string })?.text ||
+          'Please try again or reach out to us directly on WhatsApp.',
+        duration: 6000,
+      });
     } finally {
       setLoading(false);
     }

@@ -57,8 +57,8 @@ const ContactSection = () => {
             <ContactCard
               icon={Mail}
               title='Email Us'
-              content='hello@tescobit.com'
-              href='mailto:hello@tescobit.com'
+              content='themiyakasun.tb@gmail.com'
+              href='mailto:themiyakasun.tb@gmail.com'
             />
             {/* Replaces Phone with WhatsApp & redirects to WhatsApp */}
             <ContactCard
