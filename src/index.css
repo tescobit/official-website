@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -139,7 +138,7 @@
 
 @layer components {
   .bg-hero {
-    background-image: url('/images/bg.jpg');
+    background-image: url('/images/bg.webp');
     @apply bg-cover bg-center bg-no-repeat;
   }
 }

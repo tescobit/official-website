@@ -13,7 +13,13 @@ const Navbar = () => {
       <div className='container page-container'>
         <div className='flex justify-between items-center py-4'>
           <div>
-            <img src='./images/logo.png' alt='Logo' className='md:w-50 w-40' />
+            <img
+              src='/images/logo.svg'
+              alt='Tescobit Logo'
+              width='200'
+              height='40'
+              className='md:w-50 w-40 h-auto'
+            />
           </div>
 
           <ul className='hidden md:flex gap-8 items-center'>

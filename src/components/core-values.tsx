@@ -32,7 +32,7 @@ const CoreValues = () => {
     <section className='py-20 bg-gray-50' id='about'>
       <div className='container mx-auto px-4 lg:px-8'>
         <div className='text-center mb-16'>
-          <span className='inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold mb-4'>
+          <span className='inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4'>
             About us
           </span>
           <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>

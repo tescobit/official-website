@@ -114,7 +114,7 @@ const projects = [
     id: 1,
     title: 'Velvet Vogue E-Commerce Platform',
     category: 'Web Development',
-    image: './images/velvet_vogue.png',
+    image: '/images/velvet_vogue.webp',
     description:
       'A modern fashion e-commerce platform featuring dynamic product filtering, a real-time price slider, and a seamless shopping cart experience optimized for conversions.',
     stack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
@@ -124,7 +124,7 @@ const projects = [
     id: 2,
     title: 'Taskly.AI Content Generator',
     category: 'Web Development',
-    image: '/images/tasklyai.png',
+    image: '/images/tasklyai.webp',
     description:
       'A comprehensive SaaS platform empowering creators to generate articles and images instantly. Features include a premium subscription model, real-time AI processing, and a seamless content workflow.',
     stack: ['Next.js', 'Tailwind CSS', 'OpenAI API', 'Stripe'],
@@ -134,7 +134,7 @@ const projects = [
     id: 3,
     title: 'Smart Wallet Dashboard',
     category: 'Web Development',
-    image: '/images/smartwallet.png',
+    image: '/images/smartwallet.webp',
     description:
       'A comprehensive personal finance tracker featuring real-time income and expense monitoring, interactive data visualization charts, and category management in a sleek dark mode interface.',
     stack: ['React', 'Node.js', 'Chart.js', 'MongoDB'],

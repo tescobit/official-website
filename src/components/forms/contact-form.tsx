@@ -1,6 +1,5 @@
 import { contactSchema } from '../../lib/validations';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { renderToStaticMarkup } from 'react-dom/server';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import {
@@ -16,7 +15,6 @@ import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
 import { Send } from 'lucide-react';
 import type z from 'zod';
-import ContactEmail from '../emails/contact-email';
 import { useState } from 'react';
 
 const ContactForm = () => {
@@ -36,6 +34,12 @@ const ContactForm = () => {
 
   const handleSubmit = async (data: z.infer<typeof contactSchema>) => {
     setLoading(true);
+
+    const [{ renderToStaticMarkup }, { default: ContactEmail }] =
+      await Promise.all([
+        import('react-dom/server'),
+        import('../emails/contact-email'),
+      ]);
 
     const emailHtml = renderToStaticMarkup(
       <ContactEmail
